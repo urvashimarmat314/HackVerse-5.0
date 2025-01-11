@@ -26,7 +26,7 @@ export default function App() {
           <Route path="/Appointment" element={<AppointmentForm />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<LoginPage />} />
-          
+          <Route path="/VideoCall" element={<VideoCall/>} />
 
 
         </Routes>
