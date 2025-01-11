@@ -7,6 +7,7 @@ import SignUp from "./components/Login/SignUp";
 import LoginPage from "./components/Login/LoginPage";
 import NavbarSelector from "./components/Footer/NavbarSelector";
 import VideoCall from "./pages/VideoCall";
+import DoctorsInfo from "./pages/DoctorsInfo"
 
 export default function App() {
   return (
@@ -21,6 +22,10 @@ export default function App() {
           
           {/* Contact Page */}
         <Route path="/contact" element={<ContactPage />} />
+
+         {/* Profile Pages */}
+         <Route path="/profile/patient" element={<PatientForm/>} />
+        <Route path="/profile/doctor" element={<DoctorsInfo />} />
 
           {/* Other Pages */}
           <Route path="/Appointment" element={<AppointmentForm />} />
