@@ -18,11 +18,6 @@ export default function App() {
         <Routes>
           {/* Landing Page */}
           <Route path="/" element={<LandingPage />} />
-<<<<<<< HEAD
-          {/* Other Pages */}
-          <Route path="VideoCall" element={<VideoCall />} />
-
-=======
           
           {/* Contact Page */}
         <Route path="/contact" element={<ContactPage />} />
@@ -31,7 +26,8 @@ export default function App() {
           <Route path="/Appointment" element={<AppointmentForm />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<LoginPage />} />
->>>>>>> 765b8d1234ed81814a6683747b3523c4b34f740c
+          
+
 
         </Routes>
       </Router>
