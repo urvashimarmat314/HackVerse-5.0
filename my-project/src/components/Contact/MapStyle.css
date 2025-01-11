@@ -1,0 +1,64 @@
+@keyframes float {
+    0% {
+      transform: translateY(0) rotateX(0) rotateY(0);
+    }
+    50% {
+      transform: translateY(-10px) rotateX(2deg) rotateY(2deg);
+    }
+    100% {
+      transform: translateY(0) rotateX(0) rotateY(0);
+    }
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes zoomOut {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+  }
+  
+  .map-container {
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1200px;
+    animation: zoomIn 0.5s ease-in-out;
+  }
+  
+  .map-container.zoom-out {
+    animation: zoomOut 0.5s ease-in-out;
+  }
+  
+  .map-container:hover {
+    transform: translateY(-10px) rotateX(2deg) rotateY(2deg);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  }
+  
+  .map-container {
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1200px; /* Adding more depth for the 3D effect */
+    animation: float 6s ease-in-out infinite;
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth transition on hover */
+  }
+  
+  .map-container:hover {
+    transform: translateY(-15px) rotateX(10deg) rotateY(10deg); /* Slight more rotation for a floating look */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+  }
+  
+  
