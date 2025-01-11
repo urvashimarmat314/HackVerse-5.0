@@ -26,7 +26,7 @@ const PatientForm = () => {
     e.preventDefault();
     try {
       await api.post(
-        "http://localhost:3015/api/user/profile/patient/",
+        "http://localhost:5000/api/user/profile/patient/",
         formData,
         {
           withCredentials: true,
@@ -215,5 +215,5 @@ const PatientForm = () => {
     </div>
   );
 };
-
+ 
 export default PatientForm;

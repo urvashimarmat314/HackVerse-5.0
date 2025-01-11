@@ -1,0 +1,20 @@
+{
+  "patientForm": {
+    "title": "रोगी सूचना प्रपत्र",
+    "age": "आयु",
+    "gender": "लिंग",
+    "selectGender": "लिंग चुनें",
+    "male": "पुरुष",
+    "female": "महिला",
+    "other": "अन्य",
+    "medicalHistory": "चिकित्सा इतिहास",
+    "contact": "संपर्क",
+    "emergencyContact": "आपातकालीन संपर्क",
+    "allergies": "एलर्जी",
+    "medications": "वर्तमान दवाएं",
+    "submit": "जमा करें",
+    "fillDetails": "अपना विवरण भरें",
+    "formSuccess": "फॉर्म सफलतापूर्वक जमा किया गया!",
+    "formError": "फॉर्म जमा करने में विफल। कृपया पुनः प्रयास करें।"
+  }
+}

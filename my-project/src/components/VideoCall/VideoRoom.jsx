@@ -1,7 +1,7 @@
 import React from "react";
 
 const VideoRoom = () => {
-  const videoCallUrl = "https://kani21.daily.co/copab2TZoegL5igP9Nny";
+  const videoCallUrl = "https://urvashi31.daily.co/P41LA9QMvQyaCc8C9yFC";
 
   const joinRoom = () => {
     // Redirect to the video call URL

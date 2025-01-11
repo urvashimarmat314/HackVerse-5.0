@@ -2,7 +2,7 @@ import React from 'react'
 import ChatApp from '../components/LiveChat/ChatApp'
 import ChatAppUI from '../components/LiveChat/ChatUi'
 
-const LiveChat = () => {
+const Notice = () => {
   return (
     <div>
         
@@ -13,4 +13,4 @@ const LiveChat = () => {
   )
 }
 
-export default LiveChat
+export default Notice

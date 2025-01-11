@@ -12,7 +12,7 @@ import LandingPage from "../src/pages/LandingPage";
 import BlogPage from "./pages/BlogPage";
 import BlogPostPage from "./pages/BlogPostPage";
 import PatientForm from "./components/Profile/PatientForm";
-
+import Notice from "./pages/Notice";
 import Medicines from "./pages/Medicines";
 import Login from "./pages/Login";
 import SignIn from "./components/Login/SignUp";
@@ -23,6 +23,7 @@ import AppointmentForm from "./pages/AppointmentForm";
 import DoctorsInfo from "./pages/DoctorsInfo";
 import DashBoard from "./pages/DashBoard";
 import NavbarSelector from "./components/Footer/NavbarSelector"
+import SchemeLayout from "./components/BlogPage/SchemeLayout";
 
 const App = () => {
   return (
@@ -34,8 +35,8 @@ const App = () => {
         {/* Landing Page */}
         <Route path="/" element={<LandingPage />} />
 
-        {/* AI Bot Page */}
-        <Route path="/aibot" element={<AibotPage />} />
+       {/* AI Bot Page */}
+       <Route path="/aibot" element={<AibotPage />} />
 
         {/* Contact Page */}
         <Route path="/contact" element={<ContactPage />} />
@@ -50,8 +51,9 @@ const App = () => {
         <Route path="/signup" element={<SignIn />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/video-call" element={<VideoCall />} />
-        {/* <Route path="/live-chat" element={<LiveChat />} /> */}
+        <Route path="/NOTICE" element={<Notice/>} />
         <Route path="/dashboard" element={<DashBoard />} />
+        <Route path="/SchemePage" element={<SchemeLayout/>}/>
       </Routes>
     </Router>
   );

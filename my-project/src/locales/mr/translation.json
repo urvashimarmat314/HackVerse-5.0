@@ -1,0 +1,21 @@
+{
+    "patientForm": {
+      "title": "रुग्ण माहिती फॉर्म",
+      "age": "वय",
+      "gender": "लिंग",
+      "selectGender": "लिंग निवडा",
+      "male": "पुरुष",
+      "female": "महिला",
+      "other": "इतर",
+      "medicalHistory": "वैद्यकीय इतिहास",
+      "contact": "संपर्क",
+      "emergencyContact": "आपत्कालीन संपर्क",
+      "allergies": "एलर्जी",
+      "medications": "सध्याची औषधे",
+      "submit": "सबमिट करा",
+      "fillDetails": "आपली माहिती भरा",
+      "formSuccess": "फॉर्म यशस्वीरित्या सबमिट केला!",
+      "formError": "फॉर्म सबमिट करण्यात अयशस्वी. कृपया पुन्हा प्रयत्न करा."
+    }
+  }
+  

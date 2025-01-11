@@ -1,0 +1,21 @@
+{
+    "patientForm": {
+      "title": "Patient Information Form",
+      "age": "Age",
+      "gender": "Gender",
+      "selectGender": "Select Gender",
+      "male": "Male",
+      "female": "Female",
+      "other": "Other",
+      "medicalHistory": "Medical History",
+      "contact": "Contact",
+      "emergencyContact": "Emergency Contact",
+      "allergies": "Allergies",
+      "medications": "Current Medications",
+      "submit": "Submit",
+      "fillDetails": "Fill Your Details",
+      "formSuccess": "Form submitted successfully!",
+      "formError": "Failed to submit the form. Please try again."
+    }
+  }
+  
