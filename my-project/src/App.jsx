@@ -4,6 +4,7 @@ import ContactPage from "./pages/ContactPage";
 import LandingPage from "./pages/LandingPage";
 import Navbar from "./components/Footer/Navbar";
 import NavbarSelector from "./components/Footer/NavbarSelector";
+import VideoCall from "./pages/VideoCall";
 
 export default function App() {
   return (
@@ -15,11 +16,13 @@ export default function App() {
         <Routes>
           {/* Landing Page */}
           <Route path="/" element={<LandingPage />} />
-          
-          
+          {/* Other Pages */}
+          <Route path="VideoCall" element={<VideoCall />} />
+
 
         </Routes>
       </Router>
+
     </h1>
   )
 }
