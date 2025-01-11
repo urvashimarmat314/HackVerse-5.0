@@ -1,42 +1,60 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import AppointmentForm from "./pages/AppointmentForm";
-import ContactPage from "./pages/ContactPage";
-import LandingPage from "./pages/LandingPage";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
+
+// Import Navbar components
 import Navbar from "./components/Footer/Navbar";
-import SignUp from "./components/Login/SignUp";
+import ProfileNavbar from "./components/Footer/ProfileNavbar";
+
+// Import Page Components
+import AibotPage from "../src/pages/AiBot";
+import ContactPage from "../src/pages/ContactPage";
+import LandingPage from "../src/pages/LandingPage";
+import BlogPage from "./pages/BlogPage";
+import BlogPostPage from "./pages/BlogPostPage";
+import PatientForm from "./components/Profile/PatientForm";
+
+import Medicines from "./pages/Medicines";
+import Login from "./pages/Login";
+import SignIn from "./components/Login/SignUp";
 import LoginPage from "./components/Login/LoginPage";
-import NavbarSelector from "./components/Footer/NavbarSelector";
 import VideoCall from "./pages/VideoCall";
-import DoctorsInfo from "./pages/DoctorsInfo"
+// import LiveChat from "./pages/LiveChat";
+import AppointmentForm from "./pages/AppointmentForm";
+import DoctorsInfo from "./pages/DoctorsInfo";
+import DashBoard from "./pages/DashBoard";
+import NavbarSelector from "./components/Footer/NavbarSelector"
 
-export default function App() {
+const App = () => {
   return (
-    <h1 className="text-3xl font-bold underline">
-      <Router>
-        {/* Navigation */}
-        <NavbarSelector />
+    <Router>
+      {/* Navbar Selector */}
+      <NavbarSelector />
 
-        <Routes>
-          {/* Landing Page */}
-          <Route path="/" element={<LandingPage />} />
-          
-          {/* Contact Page */}
+      <Routes>
+        {/* Landing Page */}
+        <Route path="/" element={<LandingPage />} />
+
+        {/* AI Bot Page */}
+        <Route path="/aibot" element={<AibotPage />} />
+
+        {/* Contact Page */}
         <Route path="/contact" element={<ContactPage />} />
 
-         {/* Profile Pages */}
-         <Route path="/profile/patient" element={<PatientForm/>} />
+        {/* Profile Pages */}
+        <Route path="/profile/patient" element={<PatientForm />} />
         <Route path="/profile/doctor" element={<DoctorsInfo />} />
 
-          {/* Other Pages */}
-          <Route path="/Appointment" element={<AppointmentForm />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/VideoCall" element={<VideoCall/>} />
+        {/* Other Pages */}
+        <Route path="/Appointment" element={<AppointmentForm />} />
+        <Route path="/medicines" element={<Medicines />} />
+        <Route path="/signup" element={<SignIn />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/video-call" element={<VideoCall />} />
+        {/* <Route path="/live-chat" element={<LiveChat />} /> */}
+        <Route path="/dashboard" element={<DashBoard />} />
+      </Routes>
+    </Router>
+  );
+};
 
-
-        </Routes>
-      </Router>
-
-    </h1>
-  )
-}
+export default App;
