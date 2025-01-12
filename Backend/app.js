@@ -6,6 +6,7 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import setupRoutes from "./routes/index.js";
 
+
 const app = express();
 dotenv.config();
 connectDB();
@@ -19,6 +20,8 @@ app.use(
     credentials: true,
   })
 );
+
+
 
 
 setupRoutes(app);

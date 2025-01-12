@@ -37,6 +37,9 @@ const Navbar = () => {
             <li className="hover:underline cursor-pointer hover:text-blue-300 transition duration-300">
               <Link to="/NOTICE">Notice</Link>
             </li>
+            <li className="hover:underline cursor-pointer hover:text-blue-300 transition duration-300">
+              <Link to="/video-call">VideoCall</Link>
+            </li>
             
           </ul>
 
