@@ -85,7 +85,7 @@ const ProfileNavbar = () => {
               <Link to="/medicines">Medicines</Link>
             </li>
             <li className="hover:underline cursor-pointer hover:text-blue-300 transition duration-300">
-              <Link to="/live-chat">Live Chat</Link>
+              <Link to="/Notice">Bulletin</Link>
             </li>
           </ul>
 

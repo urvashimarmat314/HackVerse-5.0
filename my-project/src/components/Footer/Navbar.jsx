@@ -35,8 +35,9 @@ const Navbar = () => {
               <Link to="/Medicines">Medicines</Link>
             </li>
             <li className="hover:underline cursor-pointer hover:text-blue-300 transition duration-300">
-              <Link to="/live-chat">Live Chat</Link>
+              <Link to="/NOTICE">Notice</Link>
             </li>
+            
           </ul>
 
           {/* Mobile Menu (Dropdown Toggle) */}
@@ -121,10 +122,10 @@ const Navbar = () => {
             Medicines
           </Link>
           <Link
-            to="/live-chat"
+            to="/NOTICE"
             className="block hover:bg-blue-700 px-3 py-2 rounded-md"
           >
-            Live Chat
+            Notice
           </Link>
           <button
             onClick={() => navigate("/signup")}

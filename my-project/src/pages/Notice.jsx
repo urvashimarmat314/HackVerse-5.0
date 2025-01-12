@@ -1,6 +1,7 @@
 import React from 'react'
-import ChatApp from '../components/LiveChat/ChatApp'
+import NoticePage from '../components/LiveChat/NoticeForm'
 import ChatAppUI from '../components/LiveChat/ChatUi'
+import NoticeBoard from '../components/LiveChat/NoticeBoard'
 
 const Notice = () => {
   return (
@@ -8,7 +9,7 @@ const Notice = () => {
         
 
         <ChatAppUI/>
-        <ChatApp/>
+        <NoticeBoard/>
     </div>
   )
 }
