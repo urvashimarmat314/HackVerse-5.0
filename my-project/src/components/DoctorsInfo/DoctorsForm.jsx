@@ -3,20 +3,20 @@ import {api} from "../../axios.config.js";
 
 const DoctorsForm = () => {
   const [formData, setFormData] = useState({
-    age: "",
-    gender: "",
-    medicalCollege: "",
-    ugDegree: "",
-    yearOfUgCompletion: "",
-    medicalRegistrationNumber: "",
-    specialities: [],
-    pgDegree: "",
-    pgSpecialization: "",
-    yearOfPgCompletion: "",
-    experience: "",
+    Age: "",
+    Gender: "",
+    MedicalCollege: "",
+    UGDegree: "",
+    YearOfUGCompletion: "",
+    MedicalRegistrationNumber: "",
+    Specialities: [],
+    PGDegree: "",
+    PGSpecialization: "",
+    YearOfPGCompletion: "",
+    // experience: "",
   });
 
-  const specialityOptions = [
+  const SpecialityOptions = [
     "General Medicine",
     "Pediatrics",
     "Cardiology",
@@ -29,8 +29,8 @@ const DoctorsForm = () => {
     "Ophthalmology",
   ];
 
-  const ugDegrees = ["MBBS", "BAMS", "BHMS", "BDS"];
-  const pgDegrees = ["MD", "MS", "DNB", "DM"];
+  const UGDegrees = ["MBBS", "BAMS", "BHMS", "BDS"];
+  const PGDegrees = ["MD", "MS", "DNB", "DM"];
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -44,9 +44,9 @@ const DoctorsForm = () => {
     const value = e.target.value;
     setFormData((prev) => {
       const updatedSpecialities = e.target.checked
-        ? [...prev.specialities, value]
-        : prev.specialities.filter((speciality) => speciality !== value);
-      return { ...prev, specialities: updatedSpecialities };
+        ? [...prev.Specialities, value]
+        : prev.Specialities.filter((Speciality) => Speciality !== value);
+      return { ...prev, Specialities: updatedSpecialities };
     });
   };
 
@@ -80,8 +80,8 @@ const DoctorsForm = () => {
                 </label>
                 <input
                   type="number"
-                  name="age"
-                  value={formData.age}
+                  name="Age"
+                  value={formData.Age}
                   onChange={handleChange}
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   required
@@ -93,8 +93,8 @@ const DoctorsForm = () => {
                   Gender
                 </label>
                 <select
-                  name="gender"
-                  value={formData.gender}
+                  name="Gender"
+                  value={formData.Gender}
                   onChange={handleChange}
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   required
@@ -120,8 +120,8 @@ const DoctorsForm = () => {
                   </label>
                   <input
                     type="text"
-                    name="medicalCollege"
-                    value={formData.medicalCollege}
+                    name="MedicalCollege"
+                    value={formData.MedicalCollege}
                     onChange={handleChange}
                     className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     required
@@ -133,14 +133,14 @@ const DoctorsForm = () => {
                     UG Degree
                   </label>
                   <select
-                    name="ugDegree"
-                    value={formData.ugDegree}
+                    name="UGDegree"
+                    value={formData.UGDegree}
                     onChange={handleChange}
                     className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     required
                   >
                     <option value="">Select UG Degree</option>
-                    {ugDegrees.map((degree) => (
+                    {UGDegrees.map((degree) => (
                       <option key={degree} value={degree}>
                         {degree}
                       </option>
@@ -154,8 +154,8 @@ const DoctorsForm = () => {
                   </label>
                   <input
                     type="number"
-                    name="yearOfUgCompletion"
-                    value={formData.yearOfUgCompletion}
+                    name="YearOfUGCompletion"
+                    value={formData.YearOfUGCompletion}
                     onChange={handleChange}
                     className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     required
@@ -168,8 +168,8 @@ const DoctorsForm = () => {
                   </label>
                   <input
                     type="text"
-                    name="medicalRegistrationNumber"
-                    value={formData.medicalRegistrationNumber}
+                    name="MedicalRegistrationNumber"
+                    value={formData.MedicalRegistrationNumber}
                     onChange={handleChange}
                     className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     required
@@ -190,16 +190,16 @@ const DoctorsForm = () => {
         {/* Wrapper for Checkboxes */}
         <div className="relative overflow-y-auto max-h-72 border border-gray-300 rounded-lg shadow-lg p-4">
           <ul className="space-y-4">
-            {specialityOptions.map((speciality) => (
-              <li key={speciality} className="flex items-center space-x-3">
+            {SpecialityOptions.map((Speciality) => (
+              <li key={Speciality} className="flex items-center space-x-3">
                 <input
                   type="checkbox"
-                  value={speciality}
+                  value={Speciality}
                   onChange={handleSpecialityChange}
-                  checked={formData.specialities.includes(speciality)}
+                  checked={formData.Specialities.includes(Speciality)}
                   className="form-checkbox text-blue-500 focus:ring-blue-500"
                 />
-                <span className="text-gray-700 font-medium">{speciality}</span>
+                <span className="text-gray-700 font-medium">{Speciality}</span>
               </li>
             ))}
           </ul>
@@ -209,9 +209,9 @@ const DoctorsForm = () => {
       {/* Display Selected Specialities */}
       <div className="mt-6">
         <h2 className="text-lg font-semibold mb-2">Selected Specialities:</h2>
-        {formData.specialities.length > 0 ? (
+        {formData.Specialities.length > 0 ? (
           <ul className="list-disc pl-5">
-            {formData.specialities.map((spec, index) => (
+            {formData.Specialities.map((spec, index) => (
               <li key={index} className="text-gray-800">
                 {spec}
               </li>
@@ -234,13 +234,13 @@ const DoctorsForm = () => {
                     PG Degree
                   </label>
                   <select
-                    name="pgDegree"
-                    value={formData.pgDegree}
+                    name="PGDegree"
+                    value={formData.PGDegree}
                     onChange={handleChange}
                     className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
                     <option value="">Select PG Degree</option>
-                    {pgDegrees.map((degree) => (
+                    {PGDegrees.map((degree) => (
                       <option key={degree} value={degree}>
                         {degree}
                       </option>
@@ -254,8 +254,8 @@ const DoctorsForm = () => {
                   </label>
                   <input
                     type="text"
-                    name="pgSpecialization"
-                    value={formData.pgSpecialization}
+                    name="PGSpecialization"
+                    value={formData.PGSpecialization}
                     onChange={handleChange}
                     className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
@@ -267,14 +267,14 @@ const DoctorsForm = () => {
                   </label>
                   <input
                     type="number"
-                    name="yearOfPgCompletion"
-                    value={formData.yearOfPgCompletion}
+                    name="YearOfPGCompletion"
+                    value={formData.YearOfPGCompletion}
                     onChange={handleChange}
                     className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
 
-                <div>
+                {/* <div>
                   <label className="block text-gray-700 font-semibold mb-2">
                     Years of Experience
                   </label>
@@ -285,7 +285,7 @@ const DoctorsForm = () => {
                     onChange={handleChange}
                     className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
-                </div>
+                </div> */}
               </div>
             </div>
 
